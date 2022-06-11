@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dgMenu</title>
+    <link rel="shortcut icon" href="img/fav.svg" type="image/x-icon">
+</head>
+
+<script src="//cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'rgb-green': '#83EBAE',
+                    'rgb-blue': '#3D85F3',
+                    'rgb-purple': '#6B56EF',
+                }
+            }
+        }
+    }
+</script>
+<style type="text/tailwindcss">
+    @layer base {
+        .box {
+            @apply container mx-auto px-5
+        }
+        .btn{
+            @apply  py-2 px-4 rounded-lg border-4 transition-all w-fit
+        }
+        .rgb-gradient{
+            @apply bg-gradient-to-r from-rgb-green to-rgb-purple via-rgb-blue text-transparent bg-clip-text
+        }
+    }
+</style>
+
+<body class="bg-zinc-900 text-white bg-[url('img/light.avif')]">
+
+
+
+
+
+    <header>
+        <div class="box flex justify-between py-5">
+            <a href="#">
+                <img src="img/logo-white.svg" alt="dgMenu" class="h-6 lg:h-8">
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <main class="box flex flex-col text-center py-32 lg:py-52 gap-8">
+
+            <h1 class="text-8xl font-black">
+                Always serve the
+                <br>
+                <span class="rgb-gradient">freshest</span> menu.
+            </h1>
+            <p class="text-xl lg:text-2xl">
+                Display the most up-to-date menu to
+                your customers with dgMenu.
+            </p>
+            <div class="flex gap-4 justify-center items-center">
+                <a href="#" class="btn border-rgb-green hover:bg-rgb-green hover:text-black">Learn more</a>
+                <a href="#" class="btn border-rgb-purple hover:bg-rgb-purple">Get in touch</a>
+            </div>
+
+        </main>
+    </section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
