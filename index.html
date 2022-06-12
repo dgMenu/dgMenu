@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -59,12 +59,11 @@
         </div>
     </header>
 
-    <section id="landing">
-        <main class="box flex flex-col text-center py-32 lg:py-60 gap-8">
+    <section id="landing" class="relative">
+        <main class="box flex flex-col text-center py-32 lg:py-60 gap-8 items-center">
 
-            <h1 class="text-7xl lg:text-8xl font-black leading-none">
+            <h1 class="text-7xl lg:text-8xl font-black leading-none max-w-[17ch]">
                 Always serve the
-                <br>
                 <span class="rgb-gradient">freshest</span> menu.
             </h1>
             <p class="text-xl lg:text-2xl text-zinc-300">
@@ -75,24 +74,25 @@
                 <a href="#" class="btn border-rgb-green hover:bg-rgb-green hover:text-black">Learn more</a>
                 <a href="#" class="btn border-rgb-purple hover:bg-rgb-purple">Get in touch</a>
             </div>
-
         </main>
+        <a href="#wrong" class="absolute bottom-0 right-1/2 p-5 translate-x-1/2"><i
+                class="fas fa-chevron-down text-center animate-bounce"></i></a>
     </section>
 
 
     <section id="wrong">
-        <div class="box">
-            <h2 class="text-5xl font-black">
+        <div class="box py-28">
+            <h2 class="text-center lg:text-left text-4xl lg:text-5xl font-black">
                 What's <span class="rgb-gradient">wrong</span> with your menu?
             </h2>
-            <div class="grid lg:grid-cols-3 mt-20 gap-12">
+            <div class="grid lg:grid-cols-3 mt-20 gap-12 text-center lg:text-left">
                 <div class="space-y-2">
                     <i class="fas fa-i-cursor text-rgb-green text-4xl"></i>
                     <h3 class="font-bold text-3xl">
                         Infrequently
                         updated
                     </h3>
-                    <p class="text-zinc-300">
+                    <p class="mx-auto lg:mx-0 max-w-[30ch] text-zinc-300">
                         The exact same menu each day with incorrect prices and dishes that aren't available for the
                         day.
                     </p>
@@ -101,9 +101,9 @@
                     <i class="fas fa-leaf text-rgb-green text-4xl"></i>
                     <h3 class="font-bold text-3xl">
                         Paper
-                        wasteage
+                        wastage
                     </h3>
-                    <p class="text-zinc-300">
+                    <p class="mx-auto lg:mx-0 max-w-[30ch] text-zinc-300">
                         Printing the menu each time there is an update? Think of all the paper being wasted!
                     </p>
                 </div>
@@ -113,7 +113,7 @@
                         Never
                         sufficient
                     </h3>
-                    <p class="text-zinc-300">
+                    <p class="mx-auto lg:mx-0 max-w-[30ch] text-zinc-300">
                         Seating capacity of 100? But do you have 100 menus? Probably not!
                     </p>
                 </div>
@@ -121,6 +121,85 @@
             </div>
         </div>
     </section>
+
+
+
+
+    <section id="faq">
+        <div class="box py-28">
+            <h2 class="text-center lg:text-left text-4xl lg:text-5xl font-black">
+                <span class="rgb-gradient">Frequently</span> asked questions
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-20 gap-12">
+                <div>
+                    <h4 class="text-2xl font-black">
+                        I already have a digital menu for my restaurant. Can dgMenu still help me?
+                    </h4>
+                    <p>
+                        Sure we can! Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting
+                        in faster pageload times and cheaper cost of hosting.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-black">
+                        I already have a digital menu for my restaurant. Can dgMenu still help me?
+                    </h4>
+                    <p>
+                        Sure we can! Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting
+                        in faster pageload times and cheaper cost of hosting.
+                    </p>
+                </div>
+
+            </div>
+    </section>
+
+
+
+
+    <section id="team">
+        <div class="box py-28">
+            <h2 class="text-center lg:text-left text-4xl lg:text-5xl font-black">Meet the
+                <span class="rgb-gradient">team</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-20 gap-12">
+                <div class="space-y-2 flex items-center
+                flex-col text-center">
+                    <img src="img/profile1.png" alt="Rahul Morajker" class="h-40">
+                    <h3 class="text-3xl font-black">
+                        Rahul Morajker
+                    </h3>
+                    <p>
+                        SU190002
+                    </p>
+                </div>
+                <div class="space-y-2 flex items-center
+                flex-col text-center">
+                    <img src="img/profile2.png" alt="Rahul Morajker" class="h-40">
+                    <h3 class="text-3xl font-black">
+                        Gavin Pereira
+                    </h3>
+                    <p>
+                        SU190217
+                    </p>
+                </div>
+                <div class="space-y-2 flex items-center
+                flex-col text-center">
+                    <img src="img/profile3.png" alt="Rahul Morajker" class="h-40">
+                    <h3 class="text-3xl font-black">
+                        Aaron Vaz
+                    </h3>
+                    <p>
+                        SU190333
+                    </p>
+                </div>
+
+            </div>
+    </section>
+
+
+
+
+
 
 
 </body>
