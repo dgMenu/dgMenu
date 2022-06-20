@@ -1,0 +1,10 @@
+[
+    {
+        "q": "I already have a digital menu for my restaurant. Can dgMenu still help me?",
+        "a": "Sure we can! Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting in faster pageload times and cheaper cost of hosting."
+    },
+    {
+        "q": "Another question. I already have a digital menu for my restaurant. Can dgMenu still help me?",
+        "a": "Sure we can! Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting in faster pageload times and cheaper cost of hosting."
+    }
+]

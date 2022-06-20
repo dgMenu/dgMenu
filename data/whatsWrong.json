@@ -1,0 +1,17 @@
+[
+    {
+        "class": "fas fa-i-cursor",
+        "title": "Infrequently updated",
+        "desc": "The exact same menu each day with incorrect prices and dishes that aren't available for the day."
+    },
+    {
+        "class": "fas fa-leaf",
+        "title": "Paper wastage",
+        "desc": "Printing the menu each time there is an update? Think of all the paper being wasted!"
+    },
+    {
+        "class": "fas fa-face-sad-tear",
+        "title": "Never sufficient",
+        "desc": "Seating capacity of 100? But do you have 100 menus? Probably not!"
+    }
+]
