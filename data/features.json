@@ -1,0 +1,27 @@
+[
+    {
+        "class": "fas fa-wand-magic-sparkles",
+        "title": "Easy to update",
+        "desc": "Easily update the menu on daily basis and present only what's available."
+    },
+    {
+        "class": "fas fa-virus-slash",
+        "title": "Contactless",
+        "desc": "A need in the era of Covid-19."
+    },
+    {
+        "class": "fas fa-face-laugh-beam",
+        "title": "Menu for everyone",
+        "desc": "With dgMenu, even at the table has a menu to look at."
+    },
+    {
+        "class": "fas fa-list-check",
+        "title": "Simple UI",
+        "desc": "Easy-to-operate user interface."
+    },
+    {
+        "class": "fa-brands fa-pagelines",
+        "title": "Paperless",
+        "desc": "We aim towards cutting done the use of paper. A step to save the environment."
+    }
+]

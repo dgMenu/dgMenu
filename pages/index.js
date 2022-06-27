@@ -5,18 +5,9 @@ import Image from "next/image";
 import teamMembers from "../data/teamMembers.json";
 import faqs from "../data/faqs.json";
 import whatsWrong from "../data/whatsWrong.json";
+import features from "../data/features.json";
 
-export const getStaticProps = async () => {
-  return {
-    props: {
-      teamMembers: teamMembers,
-      faqs: faqs,
-      whatsWrong: whatsWrong,
-    },
-  };
-};
-
-export default function Home({ teamMembers, faqs, whatsWrong }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -30,7 +21,7 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
       <Header></Header>
 
       <section id="landing" className="relative">
-        <main className="box flex flex-col text-center py-32 lg:py-60 gap-8 items-center">
+        <main className="box flex flex-col text-center py-32 gap-8 items-center">
           <h1 className="text-7xl lg:text-8xl font-black leading-none max-w-[17ch]">
             Always serve the
             <span className="rgb-gradient"> freshest</span> menu.
@@ -40,12 +31,15 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
           </p>
           <div className="flex gap-4 justify-center items-center">
             <a
-              href="#"
+              href="#wrong"
               className="btn border-rgb-green hover:bg-rgb-green hover:text-black"
             >
               Learn more
             </a>
-            <a href="#" className="btn border-rgb-purple hover:bg-rgb-purple">
+            <a
+              href="#team"
+              className="btn border-rgb-purple hover:bg-rgb-purple"
+            >
               Get in touch
             </a>
           </div>
@@ -65,8 +59,29 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
           </h2>
           <div className="grid lg:grid-cols-3 mt-20 gap-12 text-center lg:text-left">
             {whatsWrong.map((feature, i) => (
-              <div className="space-y-2" key={i}>
-                <span className="text-rgb-green text-4xl">
+              <div className="space-y-2 group" key={i}>
+                <span className="text-rgb-green text-4xl group-hover:text-rgb-purple transition-colors duration-300">
+                  <i className={feature.class}></i>
+                </span>
+                <h3 className="font-bold text-3xl">{feature.title}</h3>
+                <p className="mx-auto lg:mx-0 max-w-[30ch] text-zinc-300">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div className="box py-28">
+          <h2 className="text-center lg:text-left text-4xl lg:text-5xl font-black">
+            How can dgMenu <span className="rgb-gradient"> help</span> ?
+          </h2>
+          <div className="grid lg:grid-cols-3 mt-20 gap-12 text-center lg:text-left">
+            {features.map((feature, i) => (
+              <div className="space-y-2 group" key={i}>
+                <span className="text-rgb-green text-4xl group-hover:text-rgb-purple transition-colors duration-300">
                   <i className={feature.class}></i>
                 </span>
                 <h3 className="font-bold text-3xl">{feature.title}</h3>
@@ -101,7 +116,7 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
             From our
             <span className="rgb-gradient"> clients</span>
           </h2>
-          <div className="flex flex-col lg:flex-row mt-20 gap-12 justify-center items-start">
+          <div className="flex flex-col lg:flex-row mt-20 gap-12 justify-center items-center lg:items-start">
             <div>
               <Image
                 alt="Saltt website screenshot"
@@ -121,15 +136,15 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
                 height={45}
                 layout="intrinsic"
               />
-              <q className="text-2xl font-bold">
-                The boys have done a good job.
+              <q className="text-2xl font-bold max-w-[20ch]">
+                dgMenu has done a good job at digitalizing the menu for my
+                restaurant.
               </q>
               <div>
                 <h3 className="font-black">Dan Vaz</h3>
                 <span className="italic">Proprietor, Saltt Kitchen 'n Bar</span>
               </div>
-              <h4>
-                Visit:{" "}
+              <div className="flex flex-col gap-1">
                 <a
                   rel="noreferrer"
                   className="text-rgb-green underline hover:text-rgb-purple transition-colors duration-300 font-bold"
@@ -138,7 +153,15 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
                 >
                   www.saltt.cf
                 </a>
-              </h4>
+                <a
+                  rel="noreferrer"
+                  className="text-rgb-green underline hover:text-rgb-purple transition-colors duration-300 font-bold"
+                  href="//saltt.gavn.in"
+                  target="_blank"
+                >
+                  www.saltt.gavn.in
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -157,18 +180,45 @@ export default function Home({ teamMembers, faqs, whatsWrong }) {
                 flex-col text-center"
                 key={member.name}
               >
-                <Image
-                  src={member.img}
-                  alt={member.name}
-                  title={member.name}
-                  className="h-40"
-                  width={160}
-                  height={160}
-                />
+                <div className="rounded-full overflow-hidden w-fit h-fit">
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    title={member.name}
+                    className="h-40"
+                    width={160}
+                    height={160}
+                  />
+                </div>
                 <h3 className="text-3xl font-black">{member.name}</h3>
                 <p>{member.roll}</p>
+                <div className="flex gap-3 text-lg text-rgb-green">
+                  <a
+                    href={`tel:${member.phone}`}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <i className="fas fa-phone"></i>
+                  </a>
+                  <a
+                    href={`//instagr.am/${member.ig}`}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="flex justify-center">
+            <a
+              href="mailto:hi@dgmenu.cf"
+              className="text-3xl text-center mt-20 bg-gradient-to-r from-rgb-green to-rgb-purple via-rgb-blue py-3 px-8 rounded-full text-black font-black shadow-lg shadow-rgb-blue/50 hover:shadow-rgb-blue/80 transition duration-300"
+            >
+              hi@dgmenu.cf
+            </a>
           </div>
         </div>
       </section>

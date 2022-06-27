@@ -1,10 +1,10 @@
 [
     {
-        "q": "I already have a digital menu for my restaurant. Can dgMenu still help me?",
-        "a": "Sure we can! Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting in faster pageload times and cheaper cost of hosting."
+        "q": "I already have a PDF-based digital menu system. Can dgMenu still help me?",
+        "a": "PDFs are difficult to update. Also, users do not prefer downloading files onto their devices because of the risk of getting infected by malware."
     },
     {
-        "q": "Another question. I already have a digital menu for my restaurant. Can dgMenu still help me?",
-        "a": "Sure we can! Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting in faster pageload times and cheaper cost of hosting."
+        "q": "I already have a digital menu for my restaurant. Can dgMenu still help me?",
+        "a": "Unlike your existing menu, dgMenu is hosted on the serverless JAMstack, resulting in faster page load times and cheaper cost of hosting."
     }
 ]
